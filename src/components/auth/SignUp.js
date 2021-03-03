@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-class SignIn extends Component {
+class SignOut extends Component {
     state ={
         email:"",
-        password:""
+        password:"",
+        firstname: "",
+        Lastname: ""
     }
     handleSubmit = (e) => {
         e.preventDefault();
@@ -18,7 +20,7 @@ class SignIn extends Component {
         return (
             <div className="container">
                 <form onSubmit={this.handleSubmit} className="white">
-                    <h5 className="grey-text text-darken-3">Sign In</h5>
+                    <h5 className="grey-text text-darken-3">Sign Up</h5>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
                         <input type="text" id="email" onChange= {this.handleChnage}/>
@@ -28,8 +30,16 @@ class SignIn extends Component {
                         <input type="text" id="password" onChange= {this.handleChnage}/>
                     </div>
                     <div className="input-field">
+                        <label htmlFor="firstname">First Name</label>
+                        <input type="text" id="firstname" onChange= {this.handleChnage}/>
+                    </div>
+                    <div className="input-field">
+                        <label htmlFor="lastname">Last Name</label>
+                        <input type="text" id="lastname" onChange= {this.handleChnage}/>
+                    </div>
+                    <div className="input-field">
                         <button className="btn pink lighten-1 z-depth-0">
-                            Login
+                            Sign Up
                         </button>
                     </div>
                 </form>
@@ -38,4 +48,4 @@ class SignIn extends Component {
     }
 }
 
-export default SignIn
+export default SignOut
